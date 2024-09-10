@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table td {
+            border: 2px solid black;
+        }
+        img {
+            padding: 25px;
+        }
+        .image1:hover {
+            animation-name: frontDirection;
+            animation-duration: 5s;
+            animation-timing-function: ease;
+            animation-iteration-count: 5;
+            animation-direction: alternate;
+        }
+        .image2:hover {
+            animation-name: backDirection;
+            animation-duration: 5s;
+            animation-timing-function: ease;
+            animation-iteration-count: 10;
+            animation-direction: alternate;
+        }
+        .image3:hover {
+            animation-name: downDirection;
+            animation-duration: 5s;
+            animation-timing-function: ease;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        @keyframes frontDirection {
+            25%{
+                transform: translateX(200px) rotate(150px);
+            }
+            50% {
+                transform: translateX(200px) rotate(180deg);
+            }
+            100%{
+                transform: translateX(300px) rotate(360deg);
+            }
+        }
+        @keyframes backDirection {
+            25%{
+                transform: translateX(-200px) rotate(150deg);
+            }
+            50% {
+                transform: translateX(-200px) rotate(150deg);
+            }
+            100%{
+                transform: translateX(-300px) rotate(360deg);
+            }
+        }
+        @keyframes downDirection {
+            25%{
+                transform: translateY(200px) rotate(150deg);
+            }
+            50% {
+                transform: translateY(200px) rotate(150deg);
+            }
+            100%{
+                transform: translateY(300px) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <p>Hover over the images to see the rolling and roll-back animations</p>
+    <table border="1" cellspacing="1" cellpadding="1">
+        <tbody>
+            <tr align="center">
+                <td style="padding: 25px;">Image 1</td>
+                <td>
+                    <img src="https://tse3.mm.bing.net/th?id=OIP.JH8edu_iTkyNBhLgLHmy4QCWCW&pid=Api&P=0&h=180" class="image1">
+                </td>
+            </tr>
+
+            <tr align="center">
+                <td>Image 2</td>
+                <td>
+                    <img src="https://tse3.mm.bing.net/th?id=OIP.JH8edu_iTkyNBhLgLHmy4QCWCW&pid=Api&P=0&h=180" class="image2">
+                </td>
+            </tr>
+
+            <tr align="center">
+                <td>Image 3</td>
+                <td>
+                    <img src="https://tse3.mm.bing.net/th?id=OIP.JH8edu_iTkyNBhLgLHmy4QCWCW&pid=Api&P=0&h=180" class="image3">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
